@@ -45,7 +45,7 @@ The folder includes run.py, which is a Python script that runs the web app, and 
 3.3. Go to http://0.0.0.0:3001/
 
 ## 4. Remarks
-The dataset used in the model is imbalanced. The machine learning model with imbalance dataset should be evaluated carefully, since high accuracy does not necessarily mean that the model is working properly. The model might predict all instances to one category. The trained model in the project indeed shows high accuracy, but low recall. Considering the goal of the project is to categorize disaster messages correctly, it is quite important to improve recall for practical utility of the model.  
+The dataset used in the model is imbalanced. The machine learning model with imbalance dataset should be evaluated carefully, since high accuracy does not necessarily mean that the model is working properly. The model might predict all instances to one category. The trained model in the project indeed shows high accuracy, but low recall for some categories. Considering the goal of the project is to categorize disaster messages correctly, it is quite important to improve recall for practical utility of the model.  
 
 ## 5. References
 
