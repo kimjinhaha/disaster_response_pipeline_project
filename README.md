@@ -1,14 +1,52 @@
 # Disaster Response Pipeline Project
 
-### Instructions:
-1. Run the following commands in the project's root directory to set up your database and model.
+## 1. Project Summary
+The project is to analyze disaster data from [Figure Eight](https://www.figure-eight.com/) to build an API that classifies disaster messages into categories. The project includes a web app where an emergency worker can input a new message and get classification result in several categories. The goal is to efficiently classify new messages so that relevant disaster relief agency can take actions. 
+The data used in the project contains real messages that were sent during disaster events and pre-labelled categories, which can be found in the data folder. This project is part of Udacity Data Science Nanodegree.
+
+## 2. Project Components
+### 2.1. ETL Pipeline (data folder)
+ETL Pipeline includes process_data.py, which is a Python script that 
+- Loads the messages and categories datasets
+- Merges the two datasets
+- Cleans the data
+- Stores it in a SQLite database
+
+The folder also includes ETL Pipeline Preparation.ipynb, which is a Jupyter Notebook used for prototyping ETL process.
+
+### 2.2. ML Pipeline (models folder)
+Machine Learning Pipeline includes train_classifier.py, which is a Python script that 
+- Loads data from the SQLite database
+- Splits the dataset into training and test sets
+- Builds a text processing and machine learning pipeline
+- Trains and tunes a model using GridSearchCV
+- Outputs results on the test set
+- Exports the final model as a pickle file
+
+The folder also includes ML Pipeline Preparation.ipynb, which is a Jupyter Notebook was used for prototyping the Machine Learning model.
+
+### 2.3. Flask Web App (app folder)
+Flask Web app is to deploy the web app to
+- display visualization of training data
+- return classification results on new text using the trained model
+The folder includes run.py, which is a Python script that runs the web app, and template folder with html scripts. Most of the codes for the Flask web app was provided by Udacity. 
+
+## 3. How to run the web app
+3.1. Run the following commands in the project's root directory to set up your database and model.
 
     - To run ETL pipeline that cleans data and stores in database
         `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
     - To run ML pipeline that trains classifier and saves
         `python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl`
 
-2. Run the following command in the app's directory to run your web app.
+3.2. Run the following command in the app's directory to run your web app.
     `python run.py`
 
-3. Go to http://0.0.0.0:3001/
+3.3. Go to http://0.0.0.0:3001/
+
+## 4. Remarks
+The dataset used in the model is imbalanced. The machine learning model with imbalance dataset should be evaluated carefully, since high accuracy does not necessarily mean that the model is working properly. The model might predict all instances to one category. The trained model in the project indeed shows high accuracy, but low recall. Considering the goal of the project is to categorize disaster messages correctly, it is quite important to improve recall for practical utility of the model.  
+
+## 5. References
+
+
