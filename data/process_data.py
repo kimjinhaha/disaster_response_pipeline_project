@@ -4,13 +4,30 @@ from sqlalchemy import create_engine
 
 
 def load_data(messages_filepath, categories_filepath):
+    """
+    load the messages and categories data sets, and merge them.
+
+    Args:
+    message_filepath: filepath for message.csv
+    categories_filepath: filepath for categories.csv
+
+    Returns:
+    merged data frame.
+    """
     messages = pd.read_csv(messages_filepath)
     categories = pd.read_csv(categories_filepath)
     df = messages.merge(categories, left_on='id', right_on='id')
 
     return df
 
+
 def clean_data(df):
+    """
+    Process the category column from merged dataset (df)
+    to multiple columns with correct column name and values,
+    and drop duplicated rows.
+    Returns the cleaned data frame, df
+    """
     categories = df.categories.str.split(';', expand=True)
     row = categories.iloc[0, :]
     category_colnames = row.apply(lambda x: x[:-2])
@@ -24,16 +41,21 @@ def clean_data(df):
         categories[column] = categories[column].astype('int')
 
     df.drop(columns=['categories'], inplace=True)
-    df = pd.concat([df, categories])
+    df = pd.concat([df, categories], axis=1, sort=False)
 
+    # drop duplicates
     df.drop_duplicates(inplace=True)
 
     return df
 
 
 def save_data(df, database_filename):
+    """
+    Stores df in a SQLite database in the specified database file path (database_filename)
+    """
+
     engine = create_engine('sqlite:///' + database_filename)
-    df.to_sql(df, engine, index=False)
+    df.to_sql('df', engine, index=False)
 
 
 def main():

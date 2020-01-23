@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78fe12da-4049-4448-9aae-9a03030f2b96" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/process_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/process_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/.ipynb_checkpoints/ML Pipeline Preparation-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/models/.ipynb_checkpoints/ML Pipeline Preparation-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/ML Pipeline Preparation.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/models/ML Pipeline Preparation.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/train_classifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/train_classifier.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapshot_categories.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +47,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
   </component>
   <component name="RunManager">
     <configuration name="process_data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -92,6 +101,7 @@
       <option name="presentableId" value="Default" />
       <updated>1578822729890</updated>
       <workItem from="1578822764516" duration="7203000" />
+      <workItem from="1579717948637" duration="8664000" />
     </task>
     <task id="LOCAL-00001" summary="ETL first version completed&#10;- process_data.py completed">
       <created>1578837587269</created>
@@ -150,14 +160,22 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1680.1010@0.0.1680.1010" timestamp="1578836153475" />
+    <state x="341" y="148" key="SettingsEditor" timestamp="1579723111400">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="341" y="148" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1579723111400" />
     <state x="432" y="239" key="Vcs.Push.Dialog.v2" timestamp="1578837705789">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="432" y="239" key="Vcs.Push.Dialog.v2/0.0.1680.1010@0.0.1680.1010" timestamp="1578837705789" />
-    <state x="541" y="330" key="com.intellij.ide.util.TipDialog" timestamp="1578823360347">
+    <state x="541" y="330" key="com.intellij.ide.util.TipDialog" timestamp="1579718042226">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="541" y="330" key="com.intellij.ide.util.TipDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1578823360347" />
+    <state x="541" y="330" key="com.intellij.ide.util.TipDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1579718042226" />
+    <state x="494" y="297" key="git4idea.merge.GitPullDialog" timestamp="1579718074261">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="494" y="297" key="git4idea.merge.GitPullDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1579718074261" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/disaster_response_pipeline_project$process_data.coverage" NAME="process_data Coverage Results" MODIFIED="1578834637889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
