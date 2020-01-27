@@ -71,7 +71,7 @@ The folder includes run.py, which is a Python script that runs the web app, and 
 The dataset used in the model is imbalanced as we can see from the below graph showing proportion of each category. 
 ![snapshot](https://github.com/kimjinhaha/disaster_response_pipeline_project/blob/master/proportion_categories.PNG)
 
-While the 'related' category accounts for almost 80% of all messages, 'child_alione' categroy is almost negligible. 
+While the 'related' category accounts for almost 80% of all messages, 'child_alone' category is almost negligible. 
 The machine learning model with imbalance dataset should be evaluated carefully, since high accuracy does not necessarily mean that the model is working properly. The model might predict all instances to one category. The trained model in the project indeed shows high accuracy, but low recall for some categories. Considering the goal of the project is to categorize disaster messages correctly, it is quite important to improve recall for practical utility of the model.  
 
 
